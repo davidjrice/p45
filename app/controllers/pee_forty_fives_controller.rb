@@ -11,7 +11,7 @@ class PeeFortyFivesController < ApplicationController
     @p45.first_name  = params[:first_name]
     @p45.last_name   = params[:last_name]
 
-    path = File.join(Rails.root, 'app/assets/images/p45.jpeg')
+    path = File.join(Rails.root, 'assets/images/p45.jpeg')
     p45 = Magick::ImageList.new(path)
 
     mark = Magick::Image.new(p45.first.columns, p45.first.rows/2)
