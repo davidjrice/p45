@@ -1,6 +1,10 @@
 P45::Application.routes.draw do
 
-  resources :p45
+  resources :pee_forty_fives do
+    collection do
+      get :generate
+    end
+  end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
